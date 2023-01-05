@@ -5,24 +5,16 @@
 </head>
 <body>
   <h1>Crop Yield Calculator</h1>
-  <p>Enter the following information to calculate the yield per acre:</p>
   <form>
-    <label>Crop Area: <input type="number" id="crop-area"></label><br>
-    <label>Crop Yield: <input type="number" id="crop-yield"></label><br>
-    <label>Crop Type: <input type="text" id="crop-type"></label><br>
-    <button type="button" onclick="calculateYield()">Calculate</button>
-  </form>
-  <p>Yield per acre: <span id="yield-per-acre"></span></p>
-  <script>
-    function calculateYield() {
-      // Get the input values
-      var cropArea = document.getElementById('crop-area').value;
-      var cropYield = document.getElementById('crop-yield').value;
-      // Calculate the yield per acre
-      var yieldPerAcre = cropYield / cropArea;
-      // Display the result
-      document.getElementById('yield-per-acre').innerHTML = yieldPerAcre;
-    }
-  </script>
+    <label for="crop">Crop:</label><br>
+    <input type="text" id="crop" name="crop"><br>
+    <label for="area">Area (hectares):</label><br>
+    <input type="number" id="area" name="area"><br>
+    <label for="yield">Yield (kg/hectare):</label><br>
+    <input type="number" id="yield" name="yield"><br><br>
+    <button type="button" onclick="calculateYield()">Calculate Yield</button>
+  </form> 
+  <br>
+  <p id="result"></p>
 </body>
 </html>
